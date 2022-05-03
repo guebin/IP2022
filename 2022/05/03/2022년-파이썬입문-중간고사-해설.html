@@ -142,9 +142,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-imports"><code>0</code>. imports<a class="anchor-link" href="#0.-imports"> </a></h2><p>아래코드를 이용하여 numpy 와 matplotlib을 import하라.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
 
 </div>
 </div>
@@ -255,8 +252,6 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>(2)-(6)</strong></p>
 <p>아래의 문자열을 고려하자.</p>
-<div class="highlight"><pre><span></span><span class="n">test_arr</span> <span class="o">=</span> <span class="s1">&#39;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSUGPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XAt3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/EnmZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbxNrRFi9wrf+M7Q== schacon@mylaptop.local&#39;</span>
-</pre></div>
 
 </div>
 </div>
@@ -849,40 +844,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>(10)</code> 다음은 학생들의 출석,레포트,중간고사,기말고사 점수를 입력으로 하여 학점을 계산하는 함수이다.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grade</span><span class="p">(</span><span class="n">attendance</span><span class="p">,</span> <span class="n">report</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">final</span><span class="p">):</span> 
-    <span class="k">if</span> <span class="n">attendance</span><span class="o">&lt;</span><span class="mi">70</span><span class="p">:</span> 
-        <span class="n">credit</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span> 
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="n">total_score</span> <span class="o">=</span> <span class="n">attendance</span> <span class="o">*</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="n">report</span> <span class="o">*</span> <span class="mf">0.2</span> <span class="o">+</span> <span class="n">mid</span> <span class="o">*</span> <span class="mf">0.3</span> <span class="o">+</span> <span class="n">final</span> <span class="o">*</span> <span class="mf">0.4</span> 
-        <span class="k">if</span> <span class="n">total_score</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">:</span> 
-            <span class="n">credit</span> <span class="o">=</span> <span class="s1">&#39;A+&#39;</span> 
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">credit</span> <span class="o">=</span> <span class="s1">&#39;B0&#39;</span> 
-    <span class="k">return</span> <span class="n">credit</span>
-</pre></div>
-<p>아래는 학생들의 학번, 출석점수, 레포트, 중간고사, 기말고사 점수가 입력된 리스트이다.</p>
-<div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;202212345&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">90</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212346&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">95</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212347&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">35</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212348&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212349&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">85</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212350&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">95</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212351&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">95</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212352&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">95</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">60</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212353&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">55</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212354&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">95</span><span class="p">]],</span>
-        <span class="p">[</span><span class="s1">&#39;202212355&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">100</span><span class="p">]]]</span>
-</pre></div>
-<p>아래의 ???를 적절하게 완성하여 학생들의 학점을 계산하는 코드를 완성하라.</p>
-<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">grade</span><span class="p">(</span><span class="err">???</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>(풀이)</p>
 
 </div>
 </div>
@@ -913,6 +874,13 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래는 학생들의 학번, 출석점수, 레포트, 중간고사, 기말고사 점수가 입력된 리스트이다.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -940,6 +908,22 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>아래의 ???를 적절하게 완성하여 학생들의 학점을 계산하는 코드를 완성하라.</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">grade</span><span class="p">(</span><span class="err">???</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(풀이)</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1769,9 +1753,6 @@ $$\begin{bmatrix}
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>(25)-(30)</strong></p>
 <p>a,b가 아래와 같이 주어졌다고 하자.</p>
-<div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span> 
-<span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span>
-</pre></div>
 
 </div>
 </div>
@@ -2169,9 +2150,30 @@ $$\begin{bmatrix}
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>(31)</code> 아래와 같은 배열이 있다고 하자.</p>
-<div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 <span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>numpy의 <code>@</code> 연산자를 이용하여 $\sum_{i=1}^{5}a_ib_i$를 계산하라.</p>
 
 </div>
@@ -2191,9 +2193,7 @@ $$\begin{bmatrix}
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-<span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
-<span class="n">a</span><span class="nd">@b</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="nd">@b</span>
 </pre></div>
 
     </div>
@@ -2318,7 +2318,7 @@ $$\begin{bmatrix}
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.09453584442476336</pre>
+<pre>-0.010052841585430794</pre>
 </div>
 
 </div>
@@ -2774,29 +2774,6 @@ $$\begin{bmatrix}
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>(1)-(6)</strong> 아래의 코드를 실해하여 test_dic를 생성하라.</p>
-<div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">43052</span><span class="p">)</span>
-<span class="n">att</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">rep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">mid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">fin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;202212&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">501</span><span class="p">),</span><span class="mi">200</span><span class="p">,</span><span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
-<span class="n">test_dic</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">:</span> <span class="p">{</span><span class="s1">&#39;att&#39;</span><span class="p">:</span><span class="n">att</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;rep&#39;</span><span class="p">:</span><span class="n">rep</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;mid&#39;</span><span class="p">:</span><span class="n">mid</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;fin&#39;</span><span class="p">:</span><span class="n">fin</span><span class="p">[</span><span class="n">i</span><span class="p">]}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">)}</span>
-<span class="k">del</span><span class="p">(</span><span class="n">att</span><span class="p">);</span><span class="k">del</span><span class="p">(</span><span class="n">rep</span><span class="p">);</span><span class="k">del</span><span class="p">(</span><span class="n">mid</span><span class="p">);</span><span class="k">del</span><span class="p">(</span><span class="n">fin</span><span class="p">);</span><span class="k">del</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>여기에서 <code>202212345</code>등은 학번을, att는 출석점수, rep는 레포트점수, mid는 중간고사점수, fin은 기말고사 점수를 의미한다.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(1)</code> test_dic에서 출석점수가 70이상(70&gt;=)인 학생들의 학번을 출력하는 코드를 작성하라.</p>
 
 </div>
 </div>
@@ -2825,6 +2802,20 @@ $$\begin{bmatrix}
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>여기에서 <code>202212345</code>등은 학번을, att는 출석점수, rep는 레포트점수, mid는 중간고사점수, fin은 기말고사 점수를 의미한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> test_dic에서 출석점수가 70이상(70&gt;=)인 학생들의 학번을 출력하는 코드를 작성하라.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>(풀이)</p>
@@ -4607,7 +4598,7 @@ x_n &amp; y_n
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>(철용)</strong> ipython을 이용하여 실행하기 위해서는 anaconda prompt 에서 mysum.py가 위치한 폴더로 이동한 뒤 %run mysum.py을 실행해도 된다.</p>
+<p><strong>(철용)</strong> anaconda prompt 에서 mysum.py가 위치한 폴더로 이동한 뒤 ipython을 실행하고 %run mysum.py을 실행해도 된다.</p>
 
 </div>
 </div>
