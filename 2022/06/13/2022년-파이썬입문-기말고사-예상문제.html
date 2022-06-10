@@ -145,13 +145,29 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-imports"><code>0</code>. imports<a class="anchor-link" href="#0.-imports"> </a></h2><p>아래코드를 이용하여 numpy 와 matplotlib을 import하라.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-&#44032;&#50948;,-&#48148;&#50948;,-&#48372;-&#54616;&#45208;&#48764;&#44592;-(150&#51216;)"><code>1</code>. &#44032;&#50948;, &#48148;&#50948;, &#48372; &#54616;&#45208;&#48764;&#44592; (150&#51216;)<a class="anchor-link" href="#1.-&#44032;&#50948;,-&#48148;&#50948;,-&#48372;-&#54616;&#45208;&#48764;&#44592;-(150&#51216;)"> </a></h2>
@@ -363,7 +379,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(6)</code> (5)와 동일한 두 명의 플레이어E, F를 생각하자. 두 플레이어는 100회까지는 랜덤으로 자신의 패를 선택한다. 그리고 101회부터 500회까지는 플레이어E만 데이터로 부터 학습을 하여 수정된 확률을 사용한다. 500번의 대결이 끝나고 플레이어E가 (가위,바위)를 선택하는 확률이 어떻게 업데이트 되어있는가? 플레이어E는 500번의 대결 이후에 (가위,바위) 중 어떠한 패가 자신에게 더 유리하다고 생각할까?</p>
+<p><code>(6)</code> (5)와 동일한 두 명의 플레이어E, F를 생각하자. 두 플레이어는 100회까지는 랜덤으로 자신의 패를 선택한다. 그리고 101회부터 500회까지는 플레이어F만 데이터로 부터 학습을 하여 수정된 확률을 사용한다. 500번의 대결이 끝나고 플레이어F가 (가위,보)를 선택하는 확률이 어떻게 업데이트 되어있는가?</p>
 
 </div>
 </div>
@@ -387,50 +403,7 @@ window.onload = wrap_img;
 </tr>
 <tr>
 <td style="text-align:center">t &lt;= 500</td>
-<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
 <td style="text-align:center">(1/2, 1/2)</td>
-<td style="text-align:center">플레이어E는 학습모드 / 플레이어F는 학습모드 아님</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>hint: 플레이어E는 가위를 내는게 낫다고 생각할 것이다. (가위를 내면 최소한 지는 경우는 없다.)</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(7)</code> (6)번의 플레이어E와 플레이어F가 500회~1000회까지 추가로 게임을 한다. 이번에는 플레이어F만 데이터로부터 학습한다. 1000회까지 대결을 끝낸 이후 플레이어F가 (가위,보)를 내는 확률은 어떻게 업데이트 되었는가?</p>
-<table>
-<thead><tr>
-<th style="text-align:center">시점</th>
-<th style="text-align:center">플레이어E가 (가위,바위)를 낼 확률</th>
-<th style="text-align:center">플레이어F가 (가위,보)를 낼 확률</th>
-<th style="text-align:center">비고</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">t &lt;= 100</td>
-<td style="text-align:center">(1/2, 1/2)</td>
-<td style="text-align:center">(1/2, 1/2)</td>
-<td style="text-align:center">양쪽 플레이어 모두 학습모드가 아님</td>
-</tr>
-<tr>
-<td style="text-align:center">t &lt;= 500</td>
-<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
-<td style="text-align:center">(1/2, 1/2)</td>
-<td style="text-align:center">플레이어E는 학습모드 / 플레이어F는 학습모드 아님</td>
-</tr>
-<tr>
-<td style="text-align:center">t &lt;= 1000</td>
-<td style="text-align:center">t=500시점에 업데이트된 확률</td>
 <td style="text-align:center">데이터를 학습하여 수정한 확률</td>
 <td style="text-align:center">플레이어E는 학습모드아님 / 플레이어F는 학습모드</td>
 </tr>
@@ -442,14 +415,57 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>hint: 플레이어E가 지지 않기 위해 가위만 낼 것이다. 이 심리를 역이용하면 플레이어F 역시 항상 가위를 선택하여 무승부로 이끄는 결과를 만들 수 있다.</strong></p>
+<p><strong>hint: 플레이어F는 보를 내는 것이 낫다고 생각할 것이다. (가위를 지거나 비기지만 보를 내면 지거나 이긴다.)</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(8)</code> (7)번의 플레이어E와 플레이어F가 1000회~3000회까지 추가로 게임을 한다. 이번에는 플레이어E만 데이터로부터 학습한다. 3000회까지 대결을 끝낸 이후 플레이어F가 (가위,바위)를 내는 확률은 어떻게 업데이트 되었는가?</p>
+<p><code>(7)</code> (6)번의 플레이어E와 플레이어F가 500회~1000회까지 추가로 게임을 한다. 이번에는 플레이어E만 데이터로부터 학습한다. 1000회까지 대결을 끝낸 이후 플레이어E가 (가위,바위)를 내는 확률은 어떻게 업데이트 되었는가?</p>
+<table>
+<thead><tr>
+<th style="text-align:center">시점</th>
+<th style="text-align:center">플레이어E가 (가위,바위)를 낼 확률</th>
+<th style="text-align:center">플레이어F가 (가위,보)를 낼 확률</th>
+<th style="text-align:center">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">t &lt;= 100</td>
+<td style="text-align:center">(1/2, 1/2)</td>
+<td style="text-align:center">(1/2, 1/2)</td>
+<td style="text-align:center">양쪽 플레이어 모두 학습모드가 아님</td>
+</tr>
+<tr>
+<td style="text-align:center">t &lt;= 500</td>
+<td style="text-align:center">(1/2, 1/2)</td>
+<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
+<td style="text-align:center">플레이어E는 학습모드아님 / 플레이어F는 학습모드</td>
+</tr>
+<tr>
+<td style="text-align:center">t &lt;= 1000</td>
+<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
+<td style="text-align:center">t=500시점에 업데이트된 확률</td>
+<td style="text-align:center">플레이어E는 학습모드 / 플레이어F는 학습모드아님</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>hint: 플레이어F는 보를 내도록 학습되어 있다. 따라서 플레이어E가 바위를 내면 지고 가위를 내면 이길것이다. 따라서 플레이어E는 가위가 유리하다고 생각할 것이다.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(8)</code> (7)번의 플레이어E와 플레이어F가 1000회~30000회까지 추가로 게임을 한다. 이번에는 플레이어F만 데이터로부터 학습한다. 30000회까지 대결을 끝낸 이후 플레이어F가 (가위,보)를 내는 확률은 어떻게 업데이트 되었는가?</p>
 
 </div>
 </div>
@@ -473,21 +489,21 @@ window.onload = wrap_img;
 </tr>
 <tr>
 <td style="text-align:center">t &lt;= 500</td>
-<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
 <td style="text-align:center">(1/2, 1/2)</td>
-<td style="text-align:center">플레이어E는 학습모드 / 플레이어F는 학습모드 아님</td>
+<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
+<td style="text-align:center">플레이어E는 학습모드아님 / 플레이어F는 학습모드</td>
 </tr>
 <tr>
 <td style="text-align:center">t &lt;= 1000</td>
-<td style="text-align:center">t=500시점에 업데이트된 확률</td>
 <td style="text-align:center">데이터를 학습하여 수정한 확률</td>
-<td style="text-align:center">플레이어E는 학습모드 아님 / 플레이어F는 학습모드</td>
+<td style="text-align:center">t=500시점에 업데이트된 확률</td>
+<td style="text-align:center">플레이어E는 학습모드 / 플레이어F는 학습모드아님</td>
 </tr>
 <tr>
-<td style="text-align:center">t &lt;= 3000</td>
-<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
+<td style="text-align:center">t &lt;= 30000</td>
 <td style="text-align:center">t=1000시점에 업데이트된 확률</td>
-<td style="text-align:center">플레이어E는 학습모드 / 플레이어F는 학습모드 아님</td>
+<td style="text-align:center">데이터를 학습하여 수정한 확률</td>
+<td style="text-align:center">플레이어E는 학습모드아님 / 플레이어F는 학습모드</td>
 </tr>
 </tbody>
 </table>
@@ -497,7 +513,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>hint: 플레이어F는 플레이어E의 심리를 역이용하여 가위만 내는 상황이다. 플레이어E는 오히려 그 심리를 다시 역이용하여 이번에는 바위을 내는 것이 낫다고 생각할 것이다.</strong></p>
+<p><strong>hint: 플레이어F는 원래 보가 유리하다고 생각하여 보를 자주 내도록 학습되었다. 하지만 플레이어E가 그러한 플레이어F의 성향을 파악하고 가위를 주로 내도록 학습하였다. 플레이어F는 그러한 플레이어E의 성향을 다시 파악하여 이번에는 주먹을 자주 내는 것이 유리하다고 생각할 것이다.</strong></p>
 
 </div>
 </div>
@@ -606,14 +622,14 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(3)</code></p>
+<p><code>(3)</code> for문이 실행될때마다 [묵,찌,빠] 중에 하나를 내며 빠를 누적 3회 낼경우 for문이 멈추는 이터레이터를 생성하라.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(4)</code></p>
+<p><code>(4)</code> 아래의 코드로 데이터프레임의 생성하라.</p>
 
 </div>
 </div>
@@ -738,266 +754,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> 사용예시1</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">RPC</span><span class="p">([</span><span class="s1">&#39;가위&#39;</span><span class="p">,</span><span class="s1">&#39;가위&#39;</span><span class="p">])</span>
-<span class="n">b</span><span class="o">=</span><span class="n">RPC</span><span class="p">([</span><span class="s1">&#39;가위&#39;</span><span class="p">,</span><span class="s1">&#39;보&#39;</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
-<span class="n">b</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">actions</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;가위&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">actions</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;보&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span> <span class="p">,</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(True, False)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
-<span class="n">b</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">actions</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;가위&#39;, &#39;가위&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">actions</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;보&#39;, &#39;가위&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span> <span class="p">,</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(False, True)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>-</code> 사용예시2</p>
+<p><code>-</code> 사용예시</p>
 
 </div>
 </div>
@@ -1093,7 +850,7 @@ window.onload = wrap_img;
     <tr>
       <th>1</th>
       <td>가위</td>
-      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1103,7 +860,7 @@ window.onload = wrap_img;
     <tr>
       <th>3</th>
       <td>가위</td>
-      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1178,8 +935,8 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>1</th>
-      <td>가위</td>
-      <td>1</td>
+      <td>보</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1188,8 +945,8 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>3</th>
-      <td>가위</td>
-      <td>1</td>
+      <td>보</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
