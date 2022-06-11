@@ -96,7 +96,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -159,6 +159,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 </pre></div>
 
     </div>
@@ -170,7 +171,611 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-&#44032;&#50948;,-&#48148;&#50948;,-&#48372;-&#54616;&#45208;&#48764;&#44592;-(150&#51216;)"><code>1</code>. &#44032;&#50948;, &#48148;&#50948;, &#48372; &#54616;&#45208;&#48764;&#44592; (150&#51216;)<a class="anchor-link" href="#1.-&#44032;&#50948;,-&#48148;&#50948;,-&#48372;-&#54616;&#45208;&#48764;&#44592;-(150&#51216;)"> </a></h2>
+<h2 id="1.-&#44592;&#48376;&#47928;&#51228;-(50&#51216;)"><code>1</code>. &#44592;&#48376;&#47928;&#51228; (50&#51216;)<a class="anchor-link" href="#1.-&#44592;&#48376;&#47928;&#51228;-(50&#51216;)"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(1)</code> 도함수를 구하는 함수 <code>derivate</code>를 선언하라. 이 함수를 이용하여 $f(x)=x^2$의 그래프와 $f'(x)=2x$의 그래프를 $x \in (-1,1)$의 범위에서 그려라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(2)</code> 적당한 클래스 정의하여 인스턴스 a를 만들고 print(a)의 출력결과가 본인의 학번이 나오도록 하라.</p>
+<div class="highlight"><pre><span></span><span class="c1">## 코드예시</span>
+<span class="k">class</span> <span class="nc">Klass</span><span class="p">:</span>
+    <span class="err">???</span>
+    <span class="err">???</span>
+<span class="n">a</span><span class="o">=</span><span class="n">Klass</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+<pre><code>## 출력결과
+2022-43052</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(3)</code> for문이 실행될때마다 [묵,찌,빠] 중에 하나를 내며 빠를 누적 3회 낼경우 for문이 멈추는 이터레이터를 생성하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>(4)-(6)</em></strong></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">GS25</span><span class="p">:</span> 
+    <span class="n">n</span><span class="o">=</span><span class="mi">0</span> 
+    <span class="n">total_number_of_guests</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_guests</span> <span class="o">=</span> <span class="mi">0</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(4)</code> 위의 클래스를 수정하여 아래와 같이 GS25에서 새로운 인스턴스가 생성될때마다</p>
+
+<pre><code>GS25의 점포수가 ?개로 늘었습니다.</code></pre>
+<p>라는 메시지가 출력되도록 하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(사용예시)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">GS25</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>GS25의 점포수가 1개로 늘었습니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">GS25</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>GS25의 점포수가 2개로 늘었습니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(5)</code> 함수 <code>come</code>를 인스턴스 메소드로 정의하라. 이 메소드가 실행될때마다 각 점포의 손님 인스턴스 변수 <code>number_of_guests</code>와 클래스변수 <code>total_number_of_guests</code>를 1씩 증가시키고 아래의 메시지를 출력하라.</p>
+
+<pre><code>손님이 오셨습니다!
+GS25를 방문한 총 손님수는 n명입니다. 
+현재 GS25 점포를 방문한 손님수는 m명입니다.</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(사용예시)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">come</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>새로운 손님이 오셨습니다!
+GS25를 방문한 모든 손님수는 1명입니다.
+현재 GS25 점포를 방문한 손님수는 1명입니다. 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">come</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>새로운 손님이 오셨습니다!
+GS25를 방문한 모든 손님수는 2명입니다.
+현재 GS25 점포를 방문한 손님수는 2명입니다. 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">come</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>새로운 손님이 오셨습니다!
+GS25를 방문한 모든 손님수는 3명입니다.
+현재 GS25 점포를 방문한 손님수는 1명입니다. 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(6)</code> 새로운 클래스메서드 show를 만들고 아래와 같은 메시지를 출력하도록 하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>GS25의 점포수: ??
+GS25를 방문한 총 손님수: ??</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(사용예시)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">GS25</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>GS25의 점포수: 2
+GS25를 방문한 총 손님수: 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(7)</code> <code>__eq__</code>는 연산 <code>==</code> 를 재정의하는 메소드이다. 클래스 <code>RPC_BASE</code>를 상속하여 새로운 클래스 RPC5를 만들라. 연산 <code>==</code>를 재정의하여 RPC5의 두 인스턴스의 action이 같은 경우 true를 리턴하는 기능을 구현하라.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RPC_BASE</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;가위&#39;</span><span class="p">,</span><span class="s1">&#39;바위&#39;</span><span class="p">,</span><span class="s1">&#39;보&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>hint:</strong> Appendix를 참고할 것</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>hint:</strong> RPC5의 선언부분은 아래와 같은 형태를 가지고 있다.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RPC5</span><span class="p">(</span><span class="err">???</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="err">??????</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>hint:</strong> RPC5클래스의 사용예시는 아래와 같다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">RPC5</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">action</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;바위&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">RPC5</span><span class="p">()</span>
+<span class="n">b</span><span class="o">.</span><span class="n">action</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;보&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">==</span><span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(8)</code> <code>__gt__</code>는 연산 <code>&gt;</code> 를 재정의하는 메소드이다. 클래스 <code>RPC_BASE</code>를 상속하여 새로운 클래스 RPC6를 만들라. 연산 <code>&gt;</code>를 재정의하여 RPC6의 두 인스턴스 a,b의 action이 각각 ('가위','보'), ('바위','가위'), ('보','바위') 인 경우 true를 리턴하는 기능을 구현하라.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>hint:</strong> Appendix를 참고할 것</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>hint:</strong> RPC6클래스의 사용예시는 아래와 같다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">RPC6</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">action</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;바위&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">RPC6</span><span class="p">()</span>
+<span class="n">b</span><span class="o">.</span><span class="n">action</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;보&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(False, True)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(9)</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>(10)</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-&#44032;&#50948;,-&#48148;&#50948;,-&#48372;-&#54616;&#45208;&#48764;&#44592;-(150&#51216;)"><code>2</code>. &#44032;&#50948;, &#48148;&#50948;, &#48372; &#54616;&#45208;&#48764;&#44592; (150&#51216;)<a class="anchor-link" href="#2.-&#44032;&#50948;,-&#48148;&#50948;,-&#48372;-&#54616;&#45208;&#48764;&#44592;-(150&#51216;)"> </a></h2>
 </div>
 </div>
 </div>
@@ -592,92 +1197,6 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-&#44592;&#48376;&#51201;&#51064;-&#44396;&#54788;&#47928;&#51228;-(50&#51216;)"><code>2</code>. &#44592;&#48376;&#51201;&#51064; &#44396;&#54788;&#47928;&#51228; (50&#51216;)<a class="anchor-link" href="#2.-&#44592;&#48376;&#51201;&#51064;-&#44396;&#54788;&#47928;&#51228;-(50&#51216;)"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(1)</code> 도함수를 구하는 함수 <code>derivate</code>를 선언하라. 이 함수를 이용하여 $f(x)=x^2$의 그래프와 $f'(x)=2x$의 그래프를 $x \in (-1,1)$의 범위에서 그려라.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(2)</code> 적당한 클래스 정의하여 인스턴스 a를 만들고 print(a)의 출력결과가 본인의 학번이 나오도록 하라.</p>
-<div class="highlight"><pre><span></span><span class="c1">## 코드예시</span>
-<span class="k">class</span> <span class="nc">Klass</span><span class="p">:</span>
-    <span class="err">???</span>
-    <span class="err">???</span>
-<span class="n">a</span><span class="o">=</span><span class="n">Klass</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-
-<pre><code>## 출력결과
-2022-43052</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(3)</code> for문이 실행될때마다 [묵,찌,빠] 중에 하나를 내며 빠를 누적 3회 낼경우 for문이 멈추는 이터레이터를 생성하라.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(4)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(5)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(6)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(7)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(8)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(9)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>(10)</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Appendix">Appendix<a class="anchor-link" href="#Appendix"> </a></h2>
 </div>
 </div>
@@ -704,25 +1223,27 @@ window.onload = wrap_img;
         <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">other</span><span class="p">):</span> <span class="c1"># 연산 == 를 재정의 </span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># 둘의 액션이 같으면 무승부 </span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+        <span class="c1">#note: 둘의 액션이 같으면 무승부 </span>
     
     <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">other</span><span class="p">):</span> <span class="c1"># 연산 &gt; 를 재정의 </span>
         <span class="n">pair</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">pair</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;가위&#39;</span><span class="p">,</span><span class="s1">&#39;보&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">pair</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;바위&#39;</span><span class="p">,</span><span class="s1">&#39;가위&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">pair</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;보&#39;</span><span class="p">,</span><span class="s1">&#39;바위&#39;</span><span class="p">)</span> <span class="c1"># 가위&gt;보, 바위&gt;가위, 보&gt;가위 </span>
+        <span class="k">return</span> <span class="n">pair</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;가위&#39;</span><span class="p">,</span><span class="s1">&#39;보&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">pair</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;바위&#39;</span><span class="p">,</span><span class="s1">&#39;가위&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">pair</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;보&#39;</span><span class="p">,</span><span class="s1">&#39;바위&#39;</span><span class="p">)</span> 
+        <span class="c1">#note: 가위&gt;보, 바위&gt;가위, 보&gt;가위 </span>
     
     <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">other</span><span class="p">):</span>
         <span class="c1"># step1: 각자의 패를 선택 </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
         <span class="n">other</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
         
-        <span class="c1"># step2: 승패 판단 + rewards upate </span>
+        <span class="c1"># step2: 승패 판단 + upate reward</span>
         <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">:</span> <span class="c1"># 무승부일경우 </span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
             <span class="n">other</span><span class="o">.</span><span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">elif</span> <span class="bp">self</span> <span class="o">&gt;</span> <span class="n">other</span><span class="p">:</span> <span class="c1"># self의 승리 </span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
             <span class="n">other</span><span class="o">.</span><span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># other의 승리 </span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
             <span class="n">other</span><span class="o">.</span><span class="n">rewards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         
