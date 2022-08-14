@@ -384,10 +384,10 @@ window.onload = wrap_img;
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [90]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">a</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">actions</span>
+<span class="ansi-green-fg">/tmp/ipykernel_410503/3398782843.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a<span class="ansi-blue-fg">.</span>actions <span class="ansi-red-fg">## 시점3</span>
 
-<span class="ansi-red-fg">AttributeError</span>: 'RPC' object has no attribute 'actions'</pre>
+<span class="ansi-red-fg">AttributeError</span>: 'RPS' object has no attribute 'actions'</pre>
 </div>
 </div>
 
@@ -436,7 +436,7 @@ Input <span class="ansi-green-fg">In [90]</span>, in <span class="ansi-cyan-fg">
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'가위'</pre>
+<pre>'바위'</pre>
 </div>
 
 </div>
@@ -467,7 +467,7 @@ Input <span class="ansi-green-fg">In [90]</span>, in <span class="ansi-cyan-fg">
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>가위
+<pre>바위
 </pre>
 </div>
 </div>
@@ -547,10 +547,10 @@ Input <span class="ansi-green-fg">In [90]</span>, in <span class="ansi-cyan-fg">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">_a</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">actions</span>
+<span class="ansi-green-fg">/tmp/ipykernel_410503/1882391892.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>_a<span class="ansi-blue-fg">.</span>actions <span class="ansi-red-fg">## 시점3</span>
 
-<span class="ansi-red-fg">AttributeError</span>: '_RPC' object has no attribute 'actions'</pre>
+<span class="ansi-red-fg">AttributeError</span>: '_RPS' object has no attribute 'actions'</pre>
 </div>
 </div>
 
@@ -601,7 +601,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'보'</pre>
+<pre>'바위'</pre>
 </div>
 
 </div>
@@ -634,7 +634,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>보
+<pre>바위
 </pre>
 </div>
 </div>
@@ -807,10 +807,10 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>바위
+<pre>가위
+보
 보
 바위
-보
 가위
 </pre>
 </div>
@@ -844,7 +844,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>['바위', '보', '바위', '보', '가위']</pre>
+<pre>['가위', '보', '보', '바위', '가위']</pre>
 </div>
 
 </div>
@@ -1081,10 +1081,10 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>가위
-보
-보
 바위
-보
+가위
+바위
+바위
 </pre>
 </div>
 </div>
@@ -1153,7 +1153,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>낼 수 있는 패: ['가위', '바위', '보']
-기록: ['가위', '보', '보', '바위', '보']
+기록: ['가위', '바위', '가위', '바위', '바위']
 </pre>
 </div>
 </div>
@@ -1261,7 +1261,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;__main__.RPC object at 0x7fef32fef8b0&gt;
+<pre>&lt;__main__.RPS object at 0x7f091837a550&gt;
 </pre>
 </div>
 </div>
@@ -1353,7 +1353,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef32fef8b0&gt;'</pre>
+<pre>'&lt;__main__.RPS object at 0x7f091837a550&gt;'</pre>
 </div>
 
 </div>
@@ -1392,7 +1392,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;__main__.RPC object at 0x7fef32fef8b0&gt;
+<pre>&lt;__main__.RPS object at 0x7f091837a550&gt;
 </pre>
 </div>
 </div>
@@ -2561,8 +2561,7 @@ Input <span class="ansi-green-fg">In [102]</span>, in <span class="ansi-cyan-fg"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[1 2]
- [3 4]]
+<pre>[1, 2, 3]
 </pre>
 </div>
 </div>
@@ -3678,7 +3677,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <pre><span class="ansi-red-fg">Signature:</span>      a<span class="ansi-blue-fg">.</span>__str__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Call signature:</span> a<span class="ansi-blue-fg">.</span>__str__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Type:</span>           method-wrapper
-<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__str__' of RPC object at 0x7fef9f7465c0&gt;
+<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__str__' of RPS object at 0x7f08f1eebb90&gt;
 <span class="ansi-red-fg">Docstring:</span>      Return str(self).
 </pre>
 </div>
@@ -3718,7 +3717,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <span class="ansi-red-fg">Source:</span>   
     <span class="ansi-green-fg">def</span> __repr__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">"낼 수 있는 패: {}\n기록: {}"</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>candidate<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>actions<span class="ansi-blue-fg">)</span>
-<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_288989/831267894.py
+<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_410503/2192172939.py
 <span class="ansi-red-fg">Type:</span>      method
 </pre>
 </div>
@@ -3844,7 +3843,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.RPC at 0x7fef9f747b80&gt;</pre>
+<pre>&lt;__main__.RPS at 0x7f08f1f0f290&gt;</pre>
 </div>
 
 </div>
@@ -3910,7 +3909,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef9f747b80&gt;'</pre>
+<pre>'&lt;__main__.RPS object at 0x7f08f1f0f290&gt;'</pre>
 </div>
 
 </div>
@@ -3948,7 +3947,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <span class="ansi-red-fg">Source:</span>   
     <span class="ansi-green-fg">def</span> __str__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">"낼 수 있는 패: {}\n기록: {}"</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>candidate<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>actions<span class="ansi-blue-fg">)</span>
-<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_288989/183356077.py
+<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_410503/793119288.py
 <span class="ansi-red-fg">Type:</span>      method
 </pre>
 </div>
@@ -3986,7 +3985,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <pre><span class="ansi-red-fg">Signature:</span>      a<span class="ansi-blue-fg">.</span>__repr__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Call signature:</span> a<span class="ansi-blue-fg">.</span>__repr__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Type:</span>           method-wrapper
-<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__repr__' of RPC object at 0x7fef9f747b80&gt;
+<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__repr__' of RPS object at 0x7f08f1f0f290&gt;
 <span class="ansi-red-fg">Docstring:</span>      Return repr(self).
 </pre>
 </div>
@@ -4194,7 +4193,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef9f75a890&gt;'</pre>
+<pre>'&lt;__main__.RPS object at 0x7f08f1eb5590&gt;'</pre>
 </div>
 
 </div>
@@ -4227,7 +4226,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef9f75a890&gt;'</pre>
+<pre>'&lt;__main__.RPS object at 0x7f08f1eb5590&gt;'</pre>
 </div>
 
 </div>
@@ -4295,11 +4294,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>가위
+<pre>바위
+보
+보
+보
 가위
-보
-보
-바위
 </pre>
 </div>
 </div>
@@ -4333,7 +4332,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <div class="output_html rendered_html output_subarea output_execute_result">
 
         낼 수 있는 패: ['가위', '바위', '보'] <br> 
-        기록: ['가위', '가위', '보', '보', '바위']
+        기록: ['바위', '보', '보', '보', '가위']
         
 </div>
 
